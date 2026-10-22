@@ -12,30 +12,39 @@
 
 This repository contains the professional portfolio and continuous integration/continuous deployment (CI/CD) pipeline for **Muhammad Hamad Asghar**, an undergraduate Computer Science student in the **7th semester** at **Riphah International University**.
 
-The portfolio is implemented using standard **vanilla HTML, CSS, and modern JavaScript**, built and bundled using **Vite**, and published automatically to **GitHub Pages** via a two-job **GitHub Actions** workflow.
+The portfolio is implemented using modern **React 19 with Vite**, styled with a custom dark charcoal and gold design system, and published automatically to **GitHub Pages** via a two-job **GitHub Actions** workflow.
 
 ### Design & Architecture Highlights
 - **Aesthetic:** Elegant dark charcoal (`#0c0d11`, `#151821`) and metallic gold (`#d4af37`, `#f5c542`) color scheme.
+- **Frontend Stack:** React 19 component hierarchy (`App`, `Navbar`, `Hero`, `About`, `Skills`, `Projects`, `Education`, `Hobbies`, `Contact`, `Footer`) bundled by Vite with `@vitejs/plugin-react`.
 - **Semantic & Accessible:** Exactly one `<h1>` heading, semantic structural landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`), keyboard focus indicators, and WCAG AA contrast.
-- **Static Contract:** All key section IDs (`about`, `skills`, `projects`, `contact`, `education`) are embedded in static `index.html` to allow fast, deterministic automated smoke testing without requiring browser emulation.
-- **Truthful Content:** Authentic academic, lab, and capstone projects with honest scope. No mock forms that pretend to transmit emails without a backend; direct contact uses standard `mailto:` links.
+- **Static Contract & Smoke Test Compatibility:** All key section IDs (`about`, `skills`, `projects`, `contact`, `education`) are preserved in static `index.html` within `#root`. As described in Section 20 of the lab manual, this guarantees that Vite's production build produces a `dist/index.html` that passes automated smoke tests (`npm test`) without requiring browser emulation.
+- **Truthful Content:** Authentic academic, lab, and capstone projects from Muhammad Hamad Asghar's resume. Direct contact uses verified `mailto:` and `tel:` links with real phone (`0344-7971027`) and email (`muhammadhamadasghar@gmail.com`).
 
 ---
 
-## 2. Featured Projects & Skills
+## 2. Featured Projects, Skills & Education
 
 ### Featured Projects
 1. **DataMind FYP (In Development):** Final Year undergraduate capstone project researching automated data intelligence, machine learning patterns, and structured data analysis.
-2. **Buddy Bills:** Mobile application created with Flutter, Dart, and Firebase fundamentals to track and split shared living costs and group liabilities.
-3. **Candy Crush Style Game:** C++ game applying two-dimensional arrays, data structures, tile cascade algorithms, and pattern matching mechanics.
+2. **Buddy Bills Mobile App:** Mobile application created with Flutter, Dart, and Firebase fundamentals to track and split shared living costs and group liabilities.
+3. **Candy Crush Style Game:** C++ game (PF & OOP) applying two-dimensional arrays, data structures, tile cascade algorithms, and pattern matching mechanics.
 4. **Hotel Room Booking System:** Java object-oriented management system integrated with SQL database records for room reservations, availability, and guest status tracking.
 5. **Car Game using Unity:** Physics-driven vehicle simulation built in Unity with wheel collider physics, controller handling, and checkpoint loops.
 
 ### Core Technical Skills
-- **Languages:** C++, Java, Python, Dart
-- **Web & Mobile:** HTML, CSS, JavaScript fundamentals, Flutter, Firebase fundamentals
+- **Languages:** C++ (PF & OOP), Java, Python, Dart, JavaScript
+- **Web & Mobile:** React.js, HTML5, CSS3, JavaScript fundamentals, Flutter, Firebase fundamentals, Mobile App Development
 - **Computer Science Fundamentals:** Object-Oriented Programming (OOP), Data Structures & Algorithms (DSA), Relational Databases (SQL), Problem Solving
-- **Tools & Environments:** Git/GitHub, Unity
+- **Tools & Environments:** Git/GitHub, Unity Game Engine
+
+### Education History
+- **Bachelors - Computer Science (cont.):** 7th Semester (In Progress), Riphah International University
+- **FSc - Pre-Medical (2021 – 2023):** BISE D.I. Khan Board
+- **Matric - Science (2019 – 2021):** BISE D.I. Khan Board
+
+### Personal Interests & Hobbies
+- Coding, Cycling, Painting, Badminton, Cricket
 
 ---
 

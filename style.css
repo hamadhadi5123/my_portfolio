@@ -1,5 +1,5 @@
 /* ==========================================================================
-   Design System: Dark Charcoal & Metallic Gold
+   Design System: Dark Charcoal & Metallic Gold (React + Vite)
    ========================================================================== */
 :root {
   /* Palette */
@@ -7,7 +7,7 @@
   --bg-card: #151821;
   --bg-card-hover: #1c212e;
   --bg-surface: #101217;
-  --bg-glass: rgba(21, 24, 33, 0.85);
+  --bg-glass: rgba(21, 24, 33, 0.9);
 
   --gold-primary: #d4af37;
   --gold-light: #f5c542;
@@ -61,6 +61,12 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
 }
 
 /* Keyboard Focus Ring */
@@ -242,7 +248,7 @@ body {
 
 .section-header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 40px;
 }
 
 .section-tag {
@@ -263,9 +269,44 @@ body {
 
 .section-intro {
   color: var(--text-muted);
-  max-width: 620px;
-  margin: 16px auto 0;
-  font-size: 1rem;
+  max-width: 640px;
+  margin: 14px auto 0;
+  font-size: 0.98rem;
+}
+
+/* Interactive Filter Bar */
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 36px;
+}
+
+.filter-btn {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  color: var(--text-muted);
+  padding: 8px 18px;
+  border-radius: 9999px;
+  font-size: 0.88rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  font-family: inherit;
+}
+
+.filter-btn:hover {
+  border-color: var(--gold-border);
+  color: var(--gold-light);
+  transform: translateY(-1px);
+}
+
+.filter-btn.active {
+  background: var(--gold-subtle);
+  border-color: var(--gold-primary);
+  color: var(--gold-light);
+  font-weight: 600;
 }
 
 /* Hero Section */
@@ -302,7 +343,9 @@ body {
 .hero-avatar {
   border-radius: 50%;
   display: block;
-  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.5);
+  object-fit: cover;
+  border: 3px solid var(--gold-primary);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.6);
 }
 
 .hero-title {
@@ -316,7 +359,7 @@ body {
 .hero-subtitle {
   font-size: 1.15rem;
   color: var(--text-muted);
-  max-width: 660px;
+  max-width: 680px;
   margin-bottom: 32px;
   line-height: 1.7;
 }
@@ -364,7 +407,7 @@ body {
 /* Skills Section */
 .skills-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 24px;
 }
 
@@ -393,15 +436,13 @@ body {
   list-style: none;
   display: flex;
   flex-direction: column;
-  gap: 10px;
+  gap: 12px;
 }
 
 .skill-item {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 10px;
-  font-size: 0.95rem;
-  color: var(--text-main);
 }
 
 .skill-bullet {
@@ -410,7 +451,24 @@ body {
   background-color: var(--gold-primary);
   border-radius: 50%;
   display: inline-block;
+  margin-top: 8px;
   flex-shrink: 0;
+}
+
+.skill-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.skill-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--text-main);
+}
+
+.skill-detail {
+  font-size: 0.8rem;
+  color: var(--text-dim);
 }
 
 /* Projects Section */
@@ -492,12 +550,24 @@ body {
 }
 
 /* Education Section */
+.education-timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
 .education-card {
   background: var(--bg-card);
   border: 1px solid var(--border-subtle);
   border-left: 4px solid var(--gold-primary);
   border-radius: var(--radius-md);
-  padding: 32px;
+  padding: 26px 30px;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.education-card:hover {
+  transform: translateY(-2px);
+  border-color: var(--gold-border);
 }
 
 .edu-header {
@@ -506,11 +576,11 @@ body {
   align-items: flex-start;
   flex-wrap: wrap;
   gap: 12px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .edu-degree {
-  font-size: 1.35rem;
+  font-size: 1.3rem;
   color: #ffffff;
   margin-bottom: 4px;
 }
@@ -518,6 +588,17 @@ body {
 .edu-institution {
   font-size: 1.05rem;
   font-weight: 600;
+}
+
+.edu-meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.edu-duration {
+  font-size: 0.85rem;
+  color: var(--text-dim);
 }
 
 .edu-badge {
@@ -532,31 +613,47 @@ body {
 
 .edu-details {
   color: var(--text-muted);
-  margin-bottom: 24px;
   font-size: 0.95rem;
+  line-height: 1.6;
 }
 
-.courses-heading {
-  font-size: 0.9rem;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-  color: var(--text-dim);
+/* Hobbies & Interests Section */
+.hobbies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(190px, 1fr));
+  gap: 20px;
+}
+
+.hobby-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 22px;
+  text-align: center;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.hobby-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--gold-border);
+}
+
+.hobby-icon {
+  font-size: 2.2rem;
+  display: block;
   margin-bottom: 12px;
 }
 
-.course-tags {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
+.hobby-title {
+  font-size: 1.1rem;
+  color: #ffffff;
+  margin-bottom: 6px;
 }
 
-.course-pill {
+.hobby-desc {
   font-size: 0.85rem;
-  background: var(--bg-surface);
-  border: 1px solid var(--border-subtle);
-  padding: 6px 14px;
-  border-radius: 9999px;
-  color: var(--text-main);
+  color: var(--text-muted);
+  line-height: 1.5;
 }
 
 /* Contact Section */
