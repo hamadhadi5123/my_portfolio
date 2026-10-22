@@ -1,0 +1,15 @@
+{
+  "name": "portfolio-ci-cd",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "check": "node --check main.js",
+    "build": "vite build",
+    "test": "node --test tests/site.test.mjs",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "^8.3.5"
+  }
+}
