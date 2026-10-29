@@ -1,9 +1,9 @@
 # Muhammad Hamad Asghar — Software Portfolio & CI/CD Pipeline
 
-![Portfolio pipeline](https://github.com/hamadhadi5123/portfolio-ci-cd/actions/workflows/pages.yml/badge.svg)
+![Portfolio pipeline](https://github.com/hamadhadi5123/my_portfolio/actions/workflows/pages.yml/badge.svg)
 
-> **Live Website:** [https://hamadhadi5123.github.io/portfolio-ci-cd/](https://hamadhadi5123.github.io/portfolio-ci-cd/)  
-> **Repository:** [https://github.com/hamadhadi5123/portfolio-ci-cd](https://github.com/hamadhadi5123/portfolio-ci-cd)  
+> **Live Website:** [https://hamadhadi5123.github.io/my_portfolio/](https://hamadhadi5123.github.io/my_portfolio/)  
+> **Repository:** [https://github.com/hamadhadi5123/my_portfolio](https://github.com/hamadhadi5123/my_portfolio)  
 > **AI Usage Documentation:** [AI-USAGE.md](./AI-USAGE.md)
 
 ---
@@ -162,8 +162,8 @@ Use this table to record your repository links, commit SHAs, and Actions run URL
 
 | Evidence Item | URL or Reference | Commit SHA |
 | :--- | :--- | :--- |
-| **Repository URL** | `https://github.com/hamadhadi5123/portfolio-ci-cd` | N/A |
-| **Public Website URL** | `https://hamadhadi5123.github.io/portfolio-ci-cd/` | N/A |
+| **Repository URL** | `https://github.com/hamadhadi5123/my_portfolio` | N/A |
+| **Public Website URL** | `https://hamadhadi5123.github.io/my_portfolio/` | N/A |
 | **First Successful `main` Deployment Run** | *(Paste Actions Run URL here)* | *(Paste Commit SHA)* |
 | **Visible Update Deployed Automatically** | *(Paste Actions Run URL here)* | *(Paste Commit SHA)* |
 | **Failed Pull Request Run** | *(Paste PR Run URL showing failed test)* | *(Paste Commit SHA)* |

@@ -7,7 +7,7 @@ const output = path.resolve('dist');
 const html = readFileSync(
   path.join(output, 'index.html'), 'utf8'
 );
-const base = '/portfolio-ci-cd/';
+const base = '/my_portfolio/';
 
 test('production page has useful metadata', () => {
   assert.match(html, /<title>\s*[^<]+<\/title>/i);
