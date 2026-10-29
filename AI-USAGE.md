@@ -17,15 +17,35 @@ This document records the AI-assisted development workflow for the **Muhammad Ha
 
 ## 2. Prompts Used
 
-### Follow-Up User Prompt (React & CV Customization)
+### Follow-Up User Prompt (NOVA Theme, Video Background & GSAP Animation)
 ```text
-aik kaam kr frontend react ma kr de aur baki bhi skills add kr de meri tu aur aik cheez aur change kr pre-engineering se pre medical
-[Uploaded CV Image with Photo, Contact: 0344-7971027, Pre-Medical, Skills, Projects, and Hobbies]
+es theme pr maira portfoliobna do 
+video background gsap sy lgao animation professional tariky sy lgao aur achi c portfolio web bna do
+[Uploaded Reference Screenshot of NOVA Agency Portfolio with Organic Blob, Split Hero, and Warm Editorial Palette]
 ```
 
 ---
 
 ## 3. Key Changes & Architectural Decisions
+
+1. **NOVA Editorial Theme Architecture:**
+   - Implemented an editorial luxury layout matching the user's reference: warm porcelain canvas (`#faf8f5`), high-contrast charcoal typography (`#121316`), and metallic bronze/gold highlights (`#b88628`).
+   - Integrated the distinctive organic curved fluid blob (`border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%`) housing Hamad's real portrait layered with ambient video effects and a floating active status badge.
+   - Restructured buttons into sleek rounded pill elements (`btn-pill-dark` and `btn-pill-outline`).
+
+2. **Ambient Video Background & Integration:**
+   - Generated a lightweight, high-performance looping ambient video asset (`public/videos/hero-bg.mp4`) featuring flowing liquid gold nebula dynamics and particle lighting.
+   - Positioned an ambient background video layer behind the hero with a subtle radial vignette for optimal text readability and contrast.
+   - Layered video effects inside the organic image container for depth.
+
+3. **Professional GSAP Animation Suite:**
+   - **Hero Entry Timeline:** Orchestrated with `gsap.timeline()` animating video fade-in, kicker badge slide-down, title staggered reveal, paragraph fade, button scale, and organic blob bounce entrance (`back.out(1.4)`).
+   - **Continuous Organic Floating:** Configured smooth infinite breathing motion on the visual blob using `sine.inOut` looping.
+   - **Interactive Parallax:** Connected mouse coordinates to dynamic 3D tilt/shift on the hero visual card via GSAP.
+   - **Scroll & Filter Animations:** Animated skills and project categories on tab switch and scroll using GSAP stagger effects.
+
+4. **CI/CD Smoke Test & Lab Compatibility:**
+   - Preserved all required section IDs (`about`, `skills`, `projects`, `contact`) and metadata inside the static HTML shell so automated smoke tests continue to pass 100%.
 
 1. **React Integration with Static DOM Compatibility (Section 20 of Manual):**
    - Transformed the frontend into a modular modern React 19 architecture (`src/App.jsx`, `Navbar.jsx`, `Hero.jsx`, `About.jsx`, `Skills.jsx`, `Projects.jsx`, `Education.jsx`, `Hobbies.jsx`, `Contact.jsx`, `Footer.jsx`).

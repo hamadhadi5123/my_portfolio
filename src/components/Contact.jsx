@@ -28,64 +28,64 @@ export default function Contact() {
     <section id="contact" className="section contact-section">
       <div className="container">
         <div className="section-header">
-          <span className="section-tag">Communication</span>
-          <h2 className="section-title">Contact &amp; Connect</h2>
-          <div className="gold-divider"></div>
+          <span className="section-tag">Let's Connect</span>
+          <h2 className="section-title">Start a Conversation</h2>
+          <div className="accent-bar"></div>
           <p className="section-intro">
-            Open to software engineering collaborations, academic discussions, and technical inquiries.
+            Have a project, academic collaboration, or software opportunity in mind? Feel free to reach out directly.
           </p>
         </div>
 
-        <div className="contact-wrapper">
-          <div className="contact-info-card">
-            <h3 className="contact-card-title">Get in Touch Directly</h3>
-            <p className="contact-disclaimer">
-              This portfolio uses standard direct client communications. No background servers, unverified forms, or third-party message interceptors are used.
+        <div className="contact-editorial-card">
+          <div className="contact-card-inner">
+            <h3 className="contact-main-heading">Get in touch directly</h3>
+            <p className="contact-note">
+              Direct communication via authenticated client channels. No unverified third-party form handler required.
             </p>
 
-            <div className="contact-methods">
-              <div className="contact-item">
-                <span className="contact-label">Email:</span>
-                <a href={`mailto:${email}`} className="contact-link gold-text" id="email-link">
+            <div className="contact-details-grid">
+              <div className="contact-pill-item">
+                <span className="pill-item-label">Email</span>
+                <a href={`mailto:${email}`} className="pill-item-value" id="email-link">
                   {email}
                 </a>
               </div>
 
-              <div className="contact-item">
-                <span className="contact-label">Phone:</span>
-                <a href={`tel:${phone.replace(/-/g, '')}`} className="contact-link gold-text">
+              <div className="contact-pill-item">
+                <span className="pill-item-label">Phone</span>
+                <a href={`tel:${phone.replace(/-/g, '')}`} className="pill-item-value">
                   {phone}
                 </a>
               </div>
 
-              <div className="contact-item">
-                <span className="contact-label">GitHub:</span>
+              <div className="contact-pill-item">
+                <span className="pill-item-label">GitHub</span>
                 <a
                   href="https://github.com/hamadhadi5123"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="contact-link gold-text"
+                  className="pill-item-value"
                 >
                   github.com/hamadhadi5123
                 </a>
               </div>
 
-              <div className="contact-item">
-                <span className="contact-label">Location:</span>
-                <span className="contact-plain">
+              <div className="contact-pill-item">
+                <span className="pill-item-label">Location</span>
+                <span className="pill-item-value">
                   Jhoke Malkani, Tehsil Paharpur, Dist. D.I. Khan, Pakistan
                 </span>
               </div>
             </div>
 
-            <div className="contact-actions">
-              <a href={`mailto:${email}`} className="btn btn-primary">
+            <div className="contact-btn-row">
+              <a href={`mailto:${email}`} className="btn btn-pill-dark">
                 Compose Email
               </a>
               <button
                 type="button"
                 id="copy-email-btn"
-                className="btn btn-secondary"
+                className="btn btn-pill-outline"
                 onClick={handleCopyEmail}
               >
                 Copy Email Address
@@ -93,7 +93,7 @@ export default function Contact() {
             </div>
 
             {copyStatus && (
-              <p id="copy-status" className="copy-status" role="status" aria-live="polite">
+              <p id="copy-status" className="copy-feedback-msg" role="status" aria-live="polite">
                 {copyStatus}
               </p>
             )}

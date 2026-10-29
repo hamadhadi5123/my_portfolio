@@ -12,11 +12,14 @@
 
 This repository contains the professional portfolio and continuous integration/continuous deployment (CI/CD) pipeline for **Muhammad Hamad Asghar**, an undergraduate Computer Science student in the **7th semester** at **Riphah International University**.
 
-The portfolio is implemented using modern **React 19 with Vite**, styled with a custom dark charcoal and gold design system, and published automatically to **GitHub Pages** via a two-job **GitHub Actions** workflow.
+The portfolio is implemented using modern **React 19, GSAP animation, and Vite**, styled with a luxury **NOVA editorial theme** (warm porcelain `#faf8f5`, deep charcoal `#121316`, and metallic gold `#b88628`), featuring an ambient looping video background and organic fluid blob aesthetics, published automatically to **GitHub Pages** via a two-job **GitHub Actions** workflow.
 
 ### Design & Architecture Highlights
-- **Aesthetic:** Elegant dark charcoal (`#0c0d11`, `#151821`) and metallic gold (`#d4af37`, `#f5c542`) color scheme.
-- **Frontend Stack:** React 19 component hierarchy (`App`, `Navbar`, `Hero`, `About`, `Skills`, `Projects`, `Education`, `Hobbies`, `Contact`, `Footer`) bundled by Vite with `@vitejs/plugin-react`.
+- **NOVA Luxury Editorial Theme:** Warm porcelain canvas, crisp high-contrast typography, and gold accent styling inspired by modern high-end agency designs.
+- **Ambient Looping Video Background:** High-performance local looping video (`hero-bg.mp4`) with smooth vignette overlay.
+- **GSAP Animation Suite:** Staggered load entrance timeline, continuous organic floating blob breathing motion, mouse parallax tilt, and smooth filter tab animations.
+- **Organic Fluid Blob Mask:** Custom curved silhouette housing Muhammad Hamad Asghar's authentic portrait layered with ambient motion and a live status badge.
+- **Frontend Stack:** React 19 component hierarchy (`App`, `Navbar`, `Hero`, `About`, `Skills`, `Projects`, `Education`, `Hobbies`, `Contact`, `Footer`) bundled by Vite with `@vitejs/plugin-react` and `gsap`.
 - **Semantic & Accessible:** Exactly one `<h1>` heading, semantic structural landmarks (`<header>`, `<nav>`, `<main>`, `<section>`, `<article>`, `<footer>`), keyboard focus indicators, and WCAG AA contrast.
 - **Static Contract & Smoke Test Compatibility:** All key section IDs (`about`, `skills`, `projects`, `contact`, `education`) are preserved in static `index.html` within `#root`. As described in Section 20 of the lab manual, this guarantees that Vite's production build produces a `dist/index.html` that passes automated smoke tests (`npm test`) without requiring browser emulation.
 - **Truthful Content:** Authentic academic, lab, and capstone projects from Muhammad Hamad Asghar's resume. Direct contact uses verified `mailto:` and `tel:` links with real phone (`0344-7971027`) and email (`muhammadhamadasghar@gmail.com`).

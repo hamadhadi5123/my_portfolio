@@ -13,7 +13,7 @@ const EDUCATION_HISTORY = [
     institution: 'BISE D.I. Khan Board',
     duration: '2021 – 2023',
     badge: 'Intermediate Completed',
-    details: 'Completed Higher Secondary Certificate in Pre-Medical sciences with strong analytical and empirical reasoning skills.'
+    details: 'Completed Higher Secondary Certificate in Pre-Medical sciences with strong analytical, empirical, and deductive reasoning foundations.'
   },
   {
     degree: 'Matric - Science',
@@ -31,26 +31,26 @@ export default function Education() {
         <div className="section-header">
           <span className="section-tag">Qualification</span>
           <h2 className="section-title">Education History</h2>
-          <div className="gold-divider"></div>
+          <div className="accent-bar"></div>
           <p className="section-intro">
             Formal academic background and ongoing undergraduate computer science degree studies.
           </p>
         </div>
 
-        <div className="education-timeline">
+        <div className="education-list">
           {EDUCATION_HISTORY.map((edu, idx) => (
             <div key={idx} className="education-card">
-              <div className="edu-header">
+              <div className="edu-top-row">
                 <div>
                   <h3 className="edu-degree">{edu.degree}</h3>
-                  <p className="edu-institution gold-text">{edu.institution}</p>
+                  <p className="edu-institution">{edu.institution}</p>
                 </div>
-                <div className="edu-meta">
-                  <span className="edu-duration">{edu.duration}</span>
-                  <span className="edu-badge">{edu.badge}</span>
+                <div className="edu-meta-tags">
+                  <span className="edu-period">{edu.duration}</span>
+                  <span className="edu-status-pill">{edu.badge}</span>
                 </div>
               </div>
-              <p className="edu-details">{edu.details}</p>
+              <p className="edu-desc">{edu.details}</p>
             </div>
           ))}
         </div>

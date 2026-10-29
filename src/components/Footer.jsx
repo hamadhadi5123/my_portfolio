@@ -6,12 +6,22 @@ export default function Footer() {
   return (
     <footer className="site-footer">
       <div className="container footer-container">
-        <p className="footer-copy">
-          &copy; <span id="current-year">{currentYear}</span> Muhammad Hamad Asghar. Built with React, Vite &amp; Vanilla CSS.
-        </p>
-        <p className="footer-pipeline">
-          Automated CI/CD build, syntax check, and smoke tests published to GitHub Pages.
-        </p>
+        <div className="footer-left">
+          <span className="footer-brand">HAMAD ASGHAR</span>
+          <span className="footer-degree">BS Computer Science &bull; Riphah International University</span>
+        </div>
+
+        <div className="footer-center">
+          <p className="footer-copy">
+            &copy; <span id="current-year">{currentYear}</span> Muhammad Hamad Asghar. Built with React 19, GSAP &amp; Vite.
+          </p>
+        </div>
+
+        <div className="footer-right">
+          <span className="footer-ci-badge">
+            <span className="footer-ci-dot"></span> CI/CD Automated on GitHub Actions
+          </span>
+        </div>
       </div>
     </footer>
   );

@@ -2,26 +2,12 @@ import React, { useState, useEffect } from 'react';
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
-  const [activeSection, setActiveSection] = useState('hero');
+  const [scrolled, setScrolled] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
-      const sections = ['hero', 'about', 'skills', 'projects', 'education', 'hobbies', 'contact'];
-      const scrollPos = window.scrollY + 120;
-
-      for (const sectionId of sections) {
-        const el = document.getElementById(sectionId);
-        if (el) {
-          const top = el.offsetTop;
-          const height = el.offsetHeight;
-          if (scrollPos >= top && scrollPos < top + height) {
-            setActiveSection(sectionId);
-            break;
-          }
-        }
-      }
+      setScrolled(window.scrollY > 20);
     };
-
     window.addEventListener('scroll', handleScroll, { passive: true });
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
@@ -29,10 +15,10 @@ export default function Navbar() {
   const closeMenu = () => setIsOpen(false);
 
   return (
-    <header className="site-header">
+    <header className={`site-header ${scrolled ? 'is-scrolled' : ''}`}>
       <div className="container header-container">
         <a href="#hero" className="brand-logo" aria-label="Hamad Asghar Homepage" onClick={closeMenu}>
-          <span className="gold-text brand-initials">MHA</span>
+          <span className="brand-title">HAMAD</span>
           <span className="brand-dot">.</span>
         </a>
 
@@ -52,61 +38,38 @@ export default function Navbar() {
         <nav id="primary-nav" className={`nav-menu ${isOpen ? 'is-open' : ''}`} aria-label="Main Navigation">
           <ul className="nav-list">
             <li>
-              <a
-                href="#about"
-                className={`nav-link ${activeSection === 'about' ? 'active' : ''}`}
-                onClick={closeMenu}
-              >
+              <a href="#about" className="nav-link" onClick={closeMenu}>
                 About
               </a>
             </li>
             <li>
-              <a
-                href="#skills"
-                className={`nav-link ${activeSection === 'skills' ? 'active' : ''}`}
-                onClick={closeMenu}
-              >
+              <a href="#skills" className="nav-link" onClick={closeMenu}>
                 Skills
               </a>
             </li>
             <li>
-              <a
-                href="#projects"
-                className={`nav-link ${activeSection === 'projects' ? 'active' : ''}`}
-                onClick={closeMenu}
-              >
+              <a href="#projects" className="nav-link" onClick={closeMenu}>
                 Projects
               </a>
             </li>
             <li>
-              <a
-                href="#education"
-                className={`nav-link ${activeSection === 'education' ? 'active' : ''}`}
-                onClick={closeMenu}
-              >
+              <a href="#education" className="nav-link" onClick={closeMenu}>
                 Education
               </a>
             </li>
             <li>
-              <a
-                href="#hobbies"
-                className={`nav-link ${activeSection === 'hobbies' ? 'active' : ''}`}
-                onClick={closeMenu}
-              >
+              <a href="#hobbies" className="nav-link" onClick={closeMenu}>
                 Interests
-              </a>
-            </li>
-            <li>
-              <a
-                href="#contact"
-                className={`nav-link nav-cta ${activeSection === 'contact' ? 'active' : ''}`}
-                onClick={closeMenu}
-              >
-                Contact
               </a>
             </li>
           </ul>
         </nav>
+
+        <div className="header-cta-wrapper">
+          <a href="#contact" className="btn btn-pill-dark btn-header-cta" onClick={closeMenu}>
+            Get in touch
+          </a>
+        </div>
       </div>
     </header>
   );

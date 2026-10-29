@@ -12,11 +12,11 @@
     <!-- Accessible Skip Navigation -->
     <a href="#about" class="skip-link">Skip to main content</a>
 
-    <!-- Header & Navigation -->
+    <!-- Header & Navigation (NOVA Style) -->
     <header class="site-header">
       <div class="container header-container">
         <a href="#hero" class="brand-logo" aria-label="Hamad Asghar Homepage">
-          <span class="gold-text brand-initials">MHA</span>
+          <span class="brand-title">HAMAD</span>
           <span class="brand-dot">.</span>
         </a>
 
@@ -33,27 +33,59 @@
             <li><a href="#projects" class="nav-link">Projects</a></li>
             <li><a href="#education" class="nav-link">Education</a></li>
             <li><a href="#hobbies" class="nav-link">Interests</a></li>
-            <li><a href="#contact" class="nav-link nav-cta">Contact</a></li>
           </ul>
         </nav>
+
+        <div className="header-cta-wrapper">
+          <a href="#contact" class="btn btn-pill-dark btn-header-cta">Get in touch</a>
+        </div>
       </div>
     </header>
 
     <main id="main-content">
-      <!-- Hero Section -->
+      <!-- Hero Section with Video Background and Organic Blob -->
       <section id="hero" class="hero-section">
+        <div class="hero-video-backdrop">
+          <video autoplay loop muted playsinline class="hero-ambient-video" src="./videos/hero-bg.mp4"></video>
+          <div class="hero-video-vignette"></div>
+        </div>
+
         <div class="container hero-container">
-          <div class="hero-badge">Computer Science Undergraduate &bull; 7th Semester</div>
-          <div class="hero-avatar-wrapper">
-            <img src="./images/profile.jpg" alt="Muhammad Hamad Asghar profile portrait" width="130" height="130" class="hero-avatar">
+          <div class="hero-content">
+            <div class="hero-kicker">
+              <span>SOFTWARE</span> / <span>MOBILE</span> / <span>AI &amp; DATA</span>
+            </div>
+
+            <h1 class="hero-title">
+              <span class="hero-author-label">Muhammad Hamad Asghar</span>
+              New possibilities for <br>
+              <span class="hero-highlight">ambitious software</span>
+            </h1>
+
+            <p class="hero-subtitle">
+              Undergraduate Computer Science student at <strong>Riphah International University</strong> (7th semester). Engineering modern mobile applications, game physics, and intelligent data systems that transform complex challenges into elegant solutions.
+            </p>
+
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-pill-dark">Explore projects</a>
+              <a href="#contact" class="btn btn-pill-outline">Get in touch</a>
+            </div>
           </div>
-          <h1 class="hero-title">Muhammad Hamad Asghar</h1>
-          <p class="hero-subtitle">
-            BS Computer Science student at <span class="gold-text">Riphah International University</span>, focused on software development, algorithmic problem solving, mobile and web applications.
-          </p>
-          <div class="hero-actions">
-            <a href="#projects" class="btn btn-primary">View Projects</a>
-            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+
+          <div class="hero-visual-wrapper">
+            <div class="hero-organic-blob">
+              <video autoplay loop muted playsinline class="blob-video-layer" src="./videos/hero-bg.mp4"></video>
+              <img src="./images/profile.jpg" alt="Muhammad Hamad Asghar" class="blob-portrait-layer">
+              <div class="blob-gradient-overlay"></div>
+            </div>
+
+            <div class="hero-floating-badge">
+              <span class="badge-pulse-dot"></span>
+              <div class="badge-text">
+                <strong>7th Semester BSCS</strong>
+                <span>Riphah International Univ</span>
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -62,27 +94,33 @@
       <section id="about" class="section about-section">
         <div class="container">
           <div class="section-header">
-            <span class="section-tag">Background</span>
+            <span class="section-tag">Profile Overview</span>
             <h2 class="section-title">About Me</h2>
-            <div class="gold-divider"></div>
+            <div class="accent-bar"></div>
           </div>
+
           <div class="about-grid">
             <div class="about-card">
-              <h3 class="about-card-title">Profile Summary</h3>
+              <div class="about-card-badge">01</div>
+              <h3 class="about-card-title">Academic Journey</h3>
               <p>
-                Hello! My name is <strong>Hamad</strong>, and I am an enthusiastic and motivated undergraduate pursuing a Bachelor of Science in Computer Science in my 7th semester at <strong>Riphah International University</strong>. I seek to leverage a strong academic foundation, project experiences, and passion for software engineering to contribute effectively to modern software teams.
+                Hello! My name is <strong>Hamad</strong>, and I am an enthusiastic and motivated undergraduate pursuing a Bachelor of Science in Computer Science in my 7th semester at <strong>Riphah International University</strong>. I focus on bridging solid theoretical foundations with production-quality engineering.
               </p>
             </div>
+
             <div class="about-card">
-              <h3 class="about-card-title">Technical Expertise</h3>
+              <div class="about-card-badge">02</div>
+              <h3 class="about-card-title">Technical Domain</h3>
               <p>
-                My coursework and project work encompass object-oriented design in C++ and Java, web development with React and JavaScript, data analysis with Python, cross-platform mobile apps using Flutter and Dart, and game physics in Unity.
+                My hands-on experience covers cross-platform mobile client development with Flutter &amp; Dart, object-oriented software design in C++ and Java, data analysis with Python, and interactive physics-driven game loops built in Unity.
               </p>
             </div>
+
             <div class="about-card">
-              <h3 class="about-card-title">Current Endeavors</h3>
+              <div class="about-card-badge">03</div>
+              <h3 class="about-card-title">Capstone &amp; Vision</h3>
               <p>
-                Presently actively engineering my final year capstone project, DataMind, while advancing my proficiencies in modern frontend ecosystems, continuous deployment pipelines, and cloud automation.
+                Presently actively researching and engineering my final year project, <strong>DataMind FYP</strong>, exploring data-driven intelligence and machine learning pipelines, while adhering to modern CI/CD automation principles.
               </p>
             </div>
           </div>
@@ -93,49 +131,52 @@
       <section id="skills" class="section skills-section">
         <div class="container">
           <div class="section-header">
-            <span class="section-tag">Capabilities</span>
+            <span class="section-tag">Competencies</span>
             <h2 class="section-title">Technical Skills</h2>
-            <div class="gold-divider"></div>
+            <div class="accent-bar"></div>
+            <p class="section-intro">
+              Comprehensive technical competencies built through academic coursework, programming labs, and project implementations.
+            </p>
           </div>
 
           <div class="skills-grid">
             <div class="skill-category-card">
               <h3 class="category-heading">Programming Languages</h3>
               <ul class="skill-list">
-                <li class="skill-item"><span class="skill-bullet"></span>C++ Programming (PF &amp; OOP)</li>
-                <li class="skill-item"><span class="skill-bullet"></span>Java Programming</li>
-                <li class="skill-item"><span class="skill-bullet"></span>Python Programming</li>
-                <li class="skill-item"><span class="skill-bullet"></span>Dart</li>
-                <li class="skill-item"><span class="skill-bullet"></span>JavaScript fundamentals</li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">C++ Programming (PF &amp; OOP)</span><span class="skill-detail">Memory management &amp; algorithmic logic</span></div></li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">Java Programming</span><span class="skill-detail">Core OOP, Collections, Multithreading</span></div></li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">Python Programming</span><span class="skill-detail">Scripting, Data handling, Analytics</span></div></li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">Dart</span><span class="skill-detail">Mobile client logic &amp; reactive state</span></div></li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">JavaScript fundamentals</span><span class="skill-detail">Modern ES6+, Async &amp; DOM</span></div></li>
               </ul>
             </div>
 
             <div class="skill-category-card">
-              <h3 class="category-heading">Web &amp; Mobile Development</h3>
+              <h3 class="category-heading">Web &amp; Mobile Ecosystem</h3>
               <ul class="skill-list">
-                <li class="skill-item"><span class="skill-bullet"></span>React.js</li>
-                <li class="skill-item"><span class="skill-bullet"></span>Flutter &amp; Dart</li>
-                <li class="skill-item"><span class="skill-bullet"></span>HTML &amp; CSS</li>
-                <li class="skill-item"><span class="skill-bullet"></span>Firebase fundamentals</li>
-                <li class="skill-item"><span class="skill-bullet"></span>Mobile App Development</li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">React.js</span><span class="skill-detail">Component design, Hooks, State lifecycle</span></div></li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">Flutter &amp; Dart</span><span class="skill-detail">Cross-platform native mobile apps</span></div></li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">HTML5 &amp; CSS3</span><span class="skill-detail">Semantic markup, Flexbox, CSS Grid</span></div></li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">Firebase fundamentals</span><span class="skill-detail">Auth, Firestore, Cloud messaging</span></div></li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">Mobile App Development</span><span class="skill-detail">State architecture &amp; responsive UI</span></div></li>
               </ul>
             </div>
 
             <div class="skill-category-card">
               <h3 class="category-heading">Computer Science Core</h3>
               <ul class="skill-list">
-                <li class="skill-item"><span class="skill-bullet"></span>Object-Oriented Programming (OOP)</li>
-                <li class="skill-item"><span class="skill-bullet"></span>Data Structures &amp; Algorithms (DSA)</li>
-                <li class="skill-item"><span class="skill-bullet"></span>Database Management &amp; SQL</li>
-                <li class="skill-item"><span class="skill-bullet"></span>Problem Solving</li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">Object-Oriented Programming (OOP)</span><span class="skill-detail">Inheritance, Polymorphism, Design</span></div></li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">Data Structures &amp; Algorithms (DSA)</span><span class="skill-detail">Trees, Graphs, Matrices, Sorting</span></div></li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">Database Management &amp; SQL</span><span class="skill-detail">Relational design, Queries, Normalization</span></div></li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">Problem Solving</span><span class="skill-detail">Algorithmic optimization &amp; structured debug</span></div></li>
               </ul>
             </div>
 
             <div class="skill-category-card">
-              <h3 class="category-heading">Tools &amp; Environments</h3>
+              <h3 class="category-heading">Tools &amp; Game Engines</h3>
               <ul class="skill-list">
-                <li class="skill-item"><span class="skill-bullet"></span>Git &amp; GitHub</li>
-                <li class="skill-item"><span class="skill-bullet"></span>Unity Game Engine</li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">Git &amp; GitHub</span><span class="skill-detail">Version control, Branching, PRs</span></div></li>
+                <li class="skill-item"><span class="skill-dot"></span><div class="skill-meta"><span class="skill-name">Unity Engine</span><span class="skill-detail">Physics, 2D/3D colliders, C# scripting</span></div></li>
               </ul>
             </div>
           </div>
@@ -147,74 +188,96 @@
         <div class="container">
           <div class="section-header">
             <span class="section-tag">Portfolio Work</span>
-            <h2 class="section-title">Academic &amp; Lab Projects</h2>
-            <div class="gold-divider"></div>
+            <h2 class="section-title">Selected Projects</h2>
+            <div class="accent-bar"></div>
+            <p class="section-intro">
+              A curated portfolio of honest academic coursework, mobile development, algorithmic games, and ongoing final year capstone research.
+            </p>
           </div>
 
           <div class="projects-grid">
-            <article class="project-card highlight-card">
-              <div class="card-badge in-dev">Final Year Project &bull; In Development</div>
-              <h3 class="project-name">DataMind FYP</h3>
-              <p class="project-description">
-                Undergraduate capstone project currently under active development. Explores data-driven intelligence, pattern extraction, data processing pipelines, and analytical models.
+            <article class="project-card is-highlighted">
+              <div class="project-card-header">
+                <span class="project-badge badge-fyp">FYP • In Development</span>
+                <span class="project-category-name">Final Year Capstone</span>
+              </div>
+              <h3 class="project-title">DataMind FYP</h3>
+              <p class="project-desc">
+                Undergraduate capstone project currently under active development. Explores data-driven intelligence, pattern identification, automated preprocessing pipelines, and predictive analytics models.
               </p>
               <div class="project-tags">
-                <span class="tag">Python</span>
-                <span class="tag">Data Analysis</span>
-                <span class="tag">Machine Learning</span>
-                <span class="tag">Research &amp; Dev</span>
+                <span class="tag-pill">Python</span>
+                <span class="tag-pill">Data Analytics</span>
+                <span class="tag-pill">Machine Learning</span>
+                <span class="tag-pill">Research &amp; Dev</span>
               </div>
             </article>
 
             <article class="project-card">
-              <div class="card-badge">Mobile Application</div>
-              <h3 class="project-name">Buddy Bills Mobile App</h3>
-              <p class="project-description">
-                A shared expense calculation and tracking mobile app created to help roommates and student groups split recurring costs, balance ledgers, and manage group liabilities transparently.
+              <div class="project-card-header">
+                <span class="project-badge">Mobile App</span>
+                <span class="project-category-name">Mobile Application</span>
+              </div>
+              <h3 class="project-title">Buddy Bills Mobile App</h3>
+              <p class="project-desc">
+                A shared expense tracking and bill splitting application created with Flutter, Dart, and Firebase to help roommates and student groups balance ledgers and divide recurring liabilities transparently.
               </p>
               <div class="project-tags">
-                <span class="tag">Flutter</span>
-                <span class="tag">Dart</span>
-                <span class="tag">Firebase fundamentals</span>
+                <span class="tag-pill">Flutter</span>
+                <span class="tag-pill">Dart</span>
+                <span class="tag-pill">Firebase fundamentals</span>
+                <span class="tag-pill">State Management</span>
               </div>
             </article>
 
             <article class="project-card">
-              <div class="card-badge">Game &bull; PF &amp; OOP</div>
-              <h3 class="project-name">Candy Crush Style Game</h3>
-              <p class="project-description">
-                A 2D tile-matching puzzle game implementing core data structure techniques: 2D array matrix traversal, contiguous sequence matching, tile cascade drop mechanics, and score tracking.
+              <div class="project-card-header">
+                <span class="project-badge">Game • PF &amp; OOP</span>
+                <span class="project-category-name">Game &amp; Algorithms</span>
+              </div>
+              <h3 class="project-title">Candy Crush Style Game</h3>
+              <p class="project-desc">
+                Grid-based tile matching game written in C++ implementing two-dimensional array matrix manipulations, pattern match validation, tile cascade drop mechanics, and score tracking.
               </p>
               <div class="project-tags">
-                <span class="tag">C++</span>
-                <span class="tag">DSA</span>
-                <span class="tag">OOP</span>
+                <span class="tag-pill">C++</span>
+                <span class="tag-pill">DSA</span>
+                <span class="tag-pill">OOP</span>
+                <span class="tag-pill">Game Logic</span>
               </div>
             </article>
 
             <article class="project-card">
-              <div class="card-badge">Management System</div>
-              <h3 class="project-name">Hotel Room Booking System</h3>
-              <p class="project-description">
-                Hospitality reservation system built to handle room tier categorization, guest booking requests, real-time check-in/out tracking, and persistent relational SQL records.
+              <div class="project-card-header">
+                <span class="project-badge">Management System</span>
+                <span class="project-category-name">Management System</span>
+              </div>
+              <h3 class="project-title">Hotel Room Booking System</h3>
+              <p class="project-desc">
+                Java object-oriented reservation system managing room tier categorization, guest booking requests, real-time check-in and check-out status updates, and relational SQL database records.
               </p>
               <div class="project-tags">
-                <span class="tag">Java</span>
-                <span class="tag">OOP</span>
-                <span class="tag">SQL</span>
+                <span class="tag-pill">Java</span>
+                <span class="tag-pill">OOP</span>
+                <span class="tag-pill">SQL</span>
+                <span class="tag-pill">Database Management</span>
               </div>
             </article>
 
             <article class="project-card">
-              <div class="card-badge">Game Development</div>
-              <h3 class="project-name">Car Game using Unity</h3>
-              <p class="project-description">
-                An interactive vehicle driving experience developed with Unity engine physics, custom vehicle input controller handling, obstacle avoidance hazards, and checkpoint loops.
+              <div class="project-card-header">
+                <span class="project-badge">Game Development</span>
+                <span class="project-category-name">Game Development</span>
+              </div>
+              <h3 class="project-title">Car Game using Unity</h3>
+              <p class="project-desc">
+                Interactive 3D vehicle driving simulation developed with the Unity engine, featuring wheel collider physics simulation, custom vehicle input handling, obstacle hazards, and track checkpoints.
               </p>
               <div class="project-tags">
-                <span class="tag">Unity</span>
-                <span class="tag">C# Scripting</span>
-                <span class="tag">Game Physics</span>
+                <span class="tag-pill">Unity</span>
+                <span class="tag-pill">C# Scripting</span>
+                <span class="tag-pill">Game Physics</span>
+                <span class="tag-pill">3D Navigation</span>
               </div>
             </article>
           </div>
@@ -227,46 +290,58 @@
           <div class="section-header">
             <span class="section-tag">Qualification</span>
             <h2 class="section-title">Education History</h2>
-            <div class="gold-divider"></div>
+            <div class="accent-bar"></div>
+            <p class="section-intro">
+              Formal academic background and ongoing undergraduate computer science degree studies.
+            </p>
           </div>
 
-          <div class="education-timeline">
+          <div class="education-list">
             <div class="education-card">
-              <div class="edu-header">
+              <div class="edu-top-row">
                 <div>
                   <h3 class="edu-degree">Bachelors - Computer Science (cont.)</h3>
-                  <p class="edu-institution gold-text">Riphah International University</p>
+                  <p class="edu-institution">Riphah International University</p>
                 </div>
-                <span class="edu-badge">7th Semester (In Progress)</span>
+                <div class="edu-meta-tags">
+                  <span class="edu-period">2023 – Present</span>
+                  <span class="edu-status-pill">7th Semester (In Progress)</span>
+                </div>
               </div>
-              <p class="edu-details">
-                Currently engaged in advanced computer science coursework, software engineering labs, and the DataMind capstone project.
+              <p class="edu-desc">
+                Pursuing comprehensive computer science curriculum including Data Structures, Algorithms, OOP, Database Systems, Software Engineering, and Capstone Project development.
               </p>
             </div>
 
             <div class="education-card">
-              <div class="edu-header">
+              <div class="edu-top-row">
                 <div>
                   <h3 class="edu-degree">FSc - Pre-Medical</h3>
-                  <p class="edu-institution gold-text">BISE D.I. Khan Board</p>
+                  <p class="edu-institution">BISE D.I. Khan Board</p>
                 </div>
-                <span class="edu-badge">2021 – 2023</span>
+                <div class="edu-meta-tags">
+                  <span class="edu-period">2021 – 2023</span>
+                  <span class="edu-status-pill">Intermediate Completed</span>
+                </div>
               </div>
-              <p class="edu-details">
-                Completed Intermediate Pre-Medical sciences with strong analytical, empirical, and deductive reasoning foundations.
+              <p class="edu-desc">
+                Completed Higher Secondary Certificate in Pre-Medical sciences with strong analytical, empirical, and deductive reasoning foundations.
               </p>
             </div>
 
             <div class="education-card">
-              <div class="edu-header">
+              <div class="edu-top-row">
                 <div>
                   <h3 class="edu-degree">Matric - Science</h3>
-                  <p class="edu-institution gold-text">BISE D.I. Khan Board</p>
+                  <p class="edu-institution">BISE D.I. Khan Board</p>
                 </div>
-                <span class="edu-badge">2019 – 2021</span>
+                <div class="edu-meta-tags">
+                  <span class="edu-period">2019 – 2021</span>
+                  <span class="edu-status-pill">Secondary School Certificate</span>
+                </div>
               </div>
-              <p class="edu-details">
-                Completed secondary school certificate in science with foundational mathematical and physical principles.
+              <p class="edu-desc">
+                Completed foundational secondary schooling in basic sciences with solid mathematical grounding.
               </p>
             </div>
           </div>
@@ -277,36 +352,39 @@
       <section id="hobbies" class="section hobbies-section">
         <div class="container">
           <div class="section-header">
-            <span class="section-tag">Interests</span>
+            <span class="section-tag">Passions</span>
             <h2 class="section-title">Hobbies &amp; Interests</h2>
-            <div class="gold-divider"></div>
+            <div class="accent-bar"></div>
+            <p class="section-intro">
+              Personal activities and creative pursuits that foster disciplined focus, physical energy, and innovation.
+            </p>
           </div>
 
           <div class="hobbies-grid">
             <div class="hobby-card">
-              <span class="hobby-icon">💻</span>
-              <h3 class="hobby-title">Coding</h3>
-              <p class="hobby-desc">Exploring algorithmic challenges &amp; software apps</p>
+              <span class="hobby-emoji">💻</span>
+              <h3 class="hobby-name">Coding</h3>
+              <p class="hobby-summary">Exploring algorithmic puzzles, modern web frameworks &amp; utility tools</p>
             </div>
             <div class="hobby-card">
-              <span class="hobby-icon">🚴</span>
-              <h3 class="hobby-title">Cycling</h3>
-              <p class="hobby-desc">Outdoor stamina building and active fitness</p>
+              <span class="hobby-emoji">🚴</span>
+              <h3 class="hobby-name">Cycling</h3>
+              <p class="hobby-summary">Staying active with outdoor endurance riding and fitness</p>
             </div>
             <div class="hobby-card">
-              <span class="hobby-icon">🎨</span>
-              <h3 class="hobby-title">Painting</h3>
-              <p class="hobby-desc">Creative visualization, color harmony and sketch work</p>
+              <span class="hobby-emoji">🎨</span>
+              <h3 class="hobby-name">Painting</h3>
+              <p class="hobby-summary">Creative visual art, spatial aesthetics and sketch designs</p>
             </div>
             <div class="hobby-card">
-              <span class="hobby-icon">🏸</span>
-              <h3 class="hobby-title">Badminton</h3>
-              <p class="hobby-desc">Reflex speed, agility, and competitive rallies</p>
+              <span class="hobby-emoji">🏸</span>
+              <h3 class="hobby-name">Badminton</h3>
+              <p class="hobby-summary">Fast reflex training, agility, and competitive rallies</p>
             </div>
             <div class="hobby-card">
-              <span class="hobby-icon">🏏</span>
-              <h3 class="hobby-title">Cricket</h3>
-              <p class="hobby-desc">Team strategy, athletic focus, and tactical play</p>
+              <span class="hobby-emoji">🏏</span>
+              <h3 class="hobby-name">Cricket</h3>
+              <p class="hobby-summary">Strategic gameplay, teamwork, and athletic discipline</p>
             </div>
           </div>
         </div>
@@ -316,42 +394,61 @@
       <section id="contact" class="section contact-section">
         <div class="container">
           <div class="section-header">
-            <span class="section-tag">Communication</span>
-            <h2 class="section-title">Contact &amp; Connect</h2>
-            <div class="gold-divider"></div>
+            <span class="section-tag">Let's Connect</span>
+            <h2 class="section-title">Start a Conversation</h2>
+            <div class="accent-bar"></div>
+            <p class="section-intro">
+              Have a project, academic collaboration, or software opportunity in mind? Feel free to reach out directly.
+            </p>
           </div>
 
-          <div class="contact-wrapper">
-            <div class="contact-info-card">
-              <h3 class="contact-card-title">Get in Touch Directly</h3>
-              <p class="contact-disclaimer">
-                Direct client communications via mailto and verified contact channels. No unverified third-party form handler required.
+          <div class="contact-editorial-card">
+            <div class="contact-card-inner">
+              <h3 class="contact-main-heading">Get in touch directly</h3>
+              <p class="contact-note">
+                Direct communication via authenticated client channels. No unverified third-party form handler required.
               </p>
 
-              <div class="contact-methods">
-                <div class="contact-item">
-                  <span class="contact-label">Email:</span>
-                  <a href="mailto:muhammadhamadasghar@gmail.com" class="contact-link gold-text" id="email-link">muhammadhamadasghar@gmail.com</a>
+              <div class="contact-details-grid">
+                <div class="contact-pill-item">
+                  <span class="pill-item-label">Email</span>
+                  <a href="mailto:muhammadhamadasghar@gmail.com" class="pill-item-value" id="email-link">
+                    muhammadhamadasghar@gmail.com
+                  </a>
                 </div>
-                <div class="contact-item">
-                  <span class="contact-label">Phone:</span>
-                  <a href="tel:03447971027" class="contact-link gold-text">0344-7971027</a>
+
+                <div class="contact-pill-item">
+                  <span class="pill-item-label">Phone</span>
+                  <a href="tel:03447971027" class="pill-item-value">
+                    0344-7971027
+                  </a>
                 </div>
-                <div class="contact-item">
-                  <span class="contact-label">GitHub:</span>
-                  <a href="https://github.com/hamadhadi5123" target="_blank" rel="noopener noreferrer" class="contact-link gold-text">github.com/hamadhadi5123</a>
+
+                <div class="contact-pill-item">
+                  <span class="pill-item-label">GitHub</span>
+                  <a href="https://github.com/hamadhadi5123" target="_blank" rel="noopener noreferrer" class="pill-item-value">
+                    github.com/hamadhadi5123
+                  </a>
                 </div>
-                <div class="contact-item">
-                  <span class="contact-label">Location:</span>
-                  <span class="contact-plain">Jhoke Malkani, Tehsil Paharpur, Dist. D.I. Khan, Pakistan</span>
+
+                <div class="contact-pill-item">
+                  <span class="pill-item-label">Location</span>
+                  <span class="pill-item-value">
+                    Jhoke Malkani, Tehsil Paharpur, Dist. D.I. Khan, Pakistan
+                  </span>
                 </div>
               </div>
 
-              <div class="contact-actions">
-                <a href="mailto:muhammadhamadasghar@gmail.com" class="btn btn-primary">Compose Email</a>
-                <button type="button" id="copy-email-btn" class="btn btn-secondary">Copy Email Address</button>
+              <div class="contact-btn-row">
+                <a href="mailto:muhammadhamadasghar@gmail.com" class="btn btn-pill-dark">
+                  Compose Email
+                </a>
+                <button type="button" id="copy-email-btn" class="btn btn-pill-outline">
+                  Copy Email Address
+                </button>
               </div>
-              <p id="copy-status" class="copy-status" role="status" aria-live="polite"></p>
+
+              <p id="copy-status" class="copy-feedback-msg" role="status" aria-live="polite"></p>
             </div>
           </div>
         </div>
@@ -361,12 +458,22 @@
     <!-- Footer -->
     <footer class="site-footer">
       <div class="container footer-container">
-        <p class="footer-copy">
-          &copy; <span id="current-year">2026</span> Muhammad Hamad Asghar. Built with React, Vite &amp; Vanilla CSS.
-        </p>
-        <p class="footer-pipeline">
-          Continuous deployment automated via GitHub Actions to GitHub Pages.
-        </p>
+        <div class="footer-left">
+          <span class="footer-brand">HAMAD ASGHAR</span>
+          <span class="footer-degree">BS Computer Science &bull; Riphah International University</span>
+        </div>
+
+        <div class="footer-center">
+          <p class="footer-copy">
+            &copy; <span id="current-year">2026</span> Muhammad Hamad Asghar. Built with React 19, GSAP &amp; Vite.
+          </p>
+        </div>
+
+        <div class="footer-right">
+          <span class="footer-ci-badge">
+            <span class="footer-ci-dot"></span> CI/CD Automated on GitHub Actions
+          </span>
+        </div>
       </div>
     </footer>
   </div>
